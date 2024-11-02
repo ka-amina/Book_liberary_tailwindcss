@@ -1,0 +1,31 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+
+model books {
+  id                Int      @id @default(autoincrement())
+  Book_Id           String   
+  Title             String
+  Description       String   @db.Text
+  Author            String
+  Price             Float
+  Category          String
+  Publication_date  String
+  cover             String
+  isDeleted         Boolean  @default(false) 
+  deletedAt       DateTime?
+  order             Int      @default(0)  
+}
+

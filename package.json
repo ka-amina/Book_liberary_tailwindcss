@@ -1,0 +1,14 @@
+{
+  "name": "my_book_2",
+  "version": "1.0.0",
+  "description": "\"# my-books\" \r \"# my-books\"",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.44.1",
+    "@types/node": "^20.12.12"
+  }
+}
